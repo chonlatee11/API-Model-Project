@@ -1,9 +1,10 @@
 from fastapi import FastAPI, HTTPException, File , UploadFile, Form
-from pred.image_classifier import *
+from src.pred.image_classifier import *
+# from pred.image_classifier import *
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from io import BytesIO
-from schemas.image_schema import Img
+from src.schemas.image_schema import Img
 
 app = FastAPI(title="Image Classifier API")
 

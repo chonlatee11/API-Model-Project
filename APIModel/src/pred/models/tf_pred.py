@@ -1,5 +1,5 @@
 # from utils.utilities import *
-from utils.utilities import *
+from src.utils.utilities import *
 import os
 import sys
 import tensorflow as tf
@@ -10,7 +10,7 @@ IMAGE_SHAPE = (128, 128)
 
 #load model
 def load_model():
-    myModel = "/model/model/"
+    myModel = "src/pred/models/model"
     # myModel = ('/model/model')
     print(myModel)
     classifier_model = myModel

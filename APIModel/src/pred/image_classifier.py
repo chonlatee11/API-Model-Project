@@ -1,4 +1,5 @@
-from pred.models.tf_pred import load_image, tf_predict
+# from pred.models.tf_pred import load_image, tf_predict
+from src.pred.models.tf_pred import load_image, tf_predict
 from typing import Any
 
 # response resualt prediction
