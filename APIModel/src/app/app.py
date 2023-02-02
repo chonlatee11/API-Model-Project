@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from io import BytesIO
 from src.schemas.image_schema import Img
+# from schemas.image_schema import Img
 
 app = FastAPI(title="Image Classifier API")
 

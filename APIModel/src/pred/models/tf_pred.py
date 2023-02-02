@@ -1,5 +1,5 @@
-# from utils.utilities import *
 from src.utils.utilities import *
+# from utils.utilities import *
 import os
 import sys
 import tensorflow as tf
@@ -10,8 +10,8 @@ IMAGE_SHAPE = (128, 128)
 
 #load model
 def load_model():
-    myModel = "src/pred/models/model"
-    # myModel = ('/model/model')
+    # myModel = "/model/model/"
+    myModel = ('src/pred/models/model')
     print(myModel)
     classifier_model = myModel
     classifier = tf.keras.Sequential([
@@ -41,7 +41,8 @@ def tf_predict(img_original):
     result = model.predict(img[np.newaxis, ...])
     predicted_class = tf.math.argmax(result[0], axis=-1)
     scores = tf.nn.softmax(result[0])
-    probability = np.max(scores)
+    print(scores)
+    probability = np.max(scores * 100)
 
     imagenet_labels = load_labels()
     print(imagenet_labels)
